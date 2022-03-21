@@ -16,6 +16,20 @@ ul {
 }
 
 /* COMMON */
+.mb-15 {
+    margin-bottom: 1.5rem;
+}
+
+.mt-15 {
+    margin-top: 1.5rem;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .clear-fix:after {
     content: "";
     clear: both;
@@ -133,6 +147,7 @@ main {
     width: calc(100% - 220px);
     height: calc(100vh - 100px);
     float: right;
+    overflow: auto;
 }
 
 @media screen and (max-width: 599px) {
@@ -145,6 +160,8 @@ main {
 /* Header main */
 .header-main {
     display: flex;
+    top: 0;
+    left: 0;
     justify-content: end;
     align-items: center;
     background-color: rgba(0, 0, 0, .5);
@@ -169,6 +186,7 @@ nav {
     align-items: center;
 }
 
+
 nav .nav-menu li {
     display: inline-block;
     margin: .4rem .8rem;
@@ -179,8 +197,52 @@ nav .nav-menu li {
     padding: 0 20px;
 }
 
+.main-container span {
+    display: inline-block;
+    margin: .8rem 0 2rem 0;
+    font-size: .9rem;
+
+
+    color: #a3a3a3;
+}
+
+/* Recently, for john, popular */
+.popular .spotify-cards,
+.for-john .spotify-cards,
+.recently .spotify-cards {
+    min-height: 250px;
+    width: 185px;
+    margin-right: 18px;
+}
+
+.img-box {
+    width: 185px;
+    height: 185px;
+    
+}
+
+.spotify-cards .text-card {
+    text-align: center;
+}
+
+.spotify-cards .text-card h4 {
+    margin: .8rem 0 .4rem 0;
+}
+
+.spotify-cards .text-card span {
+    font-size: .8rem;
+    color: #a3a3a3;
+}
+
+
 /* FOOTER */
 footer {
     background-color: bisque;
     height: 100px;
+}
+
+/* IMG CARD */
+#img-card1 {
+    background-image: url(../img/metal_lifting.jpg);
+    background-size: contain;
 }
