@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+html {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
 /* COMMON */
 .clear-fix:after {
     content: "";
@@ -12,20 +22,112 @@
     display: table;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+.white {
+    color: white;
+}
+
 /* SIDE MENU */
-#sidemenu {
-    background-color: rgb(166, 255, 251);
-    width: 15%;
+#side-menu {
+    color: #a3a3a3;
+    background-color: rgb(0, 0, 0);
+    width: 220px;
     height: calc(100vh - 100px);
     float: left;
+    padding: 35px 20px 0 20px;
+}
+
+#logo {
+    width: 70%;
+}
+
+#logo-small {
+    width: 70%;
+    display: none;
+}
+
+/* Side list */
+.side-menu-list {
+    margin: 1.5rem 0;
+}
+
+.side-menu-list li {
+    margin-bottom: 1rem;
+}
+
+.side-menu-list li img {
+    width: 30px;    
+    vertical-align: middle;
+}
+
+/* Side playlist */
+#side-menu .playlist li {
+    margin: .7rem 0;
+    font-size: .8rem;
+}
+
+#side-menu .playlist span {
+    font-size: 1rem;
+}
+
+#side-menu .playlist i {
+    font-size: 2.3rem;
+    vertical-align: middle;
+}
+
+/* Side footer */
+.side-footer {
+    margin-top: 300px;    
+    width: calc(100% - 40px);
+}
+
+.side-footer #download {
+    width: 15px;
+    vertical-align: middle;
+}
+
+.side-footer hr {
+    margin: .5rem 0;
+}
+
+.side-footer #profile {
+    background-color: gray;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+}
+
+.side-footer span {
+    font-size: .7rem;
 }
 
 /* MAIN */
 main {
-    background-color: lightgreen;
-    width: 85%;
+    background-color: #141922;
+    width: calc(100% - 220px);
     height: calc(100vh - 100px);
     float: right;
+}
+
+/* Header main */
+.header-main {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .5);
+    height: 100px;
+}
+
+.header-main .upgrade {
+    display: inline-block;
+    padding: .7rem 2rem;
+    border: 1px solid white;
+    border-radius: 50px;
+    font-size: .8rem;
 }
 
 /* FOOTER */
