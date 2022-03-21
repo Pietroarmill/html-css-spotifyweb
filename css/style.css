@@ -45,7 +45,7 @@ ul {
 }
 
 #logo-small {
-    width: 70%;
+    width: 30px;
     display: none;
 }
 
@@ -81,7 +81,7 @@ ul {
 /* Side footer */
 .side-footer {
     margin-top: 300px;    
-    width: calc(100% - 40px);
+    width: 100%;
 }
 
 .side-footer #download {
@@ -105,6 +105,28 @@ ul {
     font-size: .7rem;
 }
 
+@media screen and (max-width: 599px) {
+    
+    #side-menu {
+        width: 50px;
+        padding: 20px 10px 0 10px;
+    }
+
+    #logo-small {
+        display: block;
+    }
+
+    #logo,
+    #side-menu .side-menu-list span,
+    .side-footer,
+    .playlist,
+    .plus-playlist {
+        display: none;
+    }
+
+}
+
+
 /* MAIN */
 main {
     background-color: #141922;
@@ -113,6 +135,13 @@ main {
     float: right;
 }
 
+@media screen and (max-width: 599px) {
+    
+        main {
+        width: calc(100% - 50px);
+    }
+    
+}
 /* Header main */
 .header-main {
     display: flex;
@@ -128,6 +157,26 @@ main {
     border: 1px solid white;
     border-radius: 50px;
     font-size: .8rem;
+}
+
+/* Main nav */
+nav {
+    font-size: .9rem;
+    color: #a3a3a3;
+    min-height: 60px;     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .nav-menu li {
+    display: inline-block;
+    margin: .4rem .8rem;
+}
+
+/* Main container */
+.main-container {
+    padding: 0 20px;
 }
 
 /* FOOTER */
