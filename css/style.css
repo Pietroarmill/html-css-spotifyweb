@@ -64,6 +64,10 @@ a {
     height: calc(100vh - 100px);
 }
 
+body {
+    min-width: 500px;
+}
+
 /* SIDE MENU */
 #side-menu {
     color: #a3a3a3;
@@ -86,11 +90,14 @@ a {
 #logo {
     width: 70%;
     margin: 20px 0;
+    padding-left: 20px;
 }
 
 #logo-small {
     width: 30px;
     display: none;
+    padding-left: 20px;
+
 }
 
 /* Side list */
@@ -194,11 +201,21 @@ a {
     
     #side-menu {
         width: 50px;
-        padding: 20px 10px 0 10px;
+        padding: 0;
     }
 
     #logo-small {
         display: block;
+        padding: 0;
+        margin: 20px 0 0 10px;
+    }
+
+    .side-menu-list {
+        margin: 20px 0 0 10px;
+    }
+
+    .side-menu-list li{
+        padding: 0;
     }
 
     .side-menu-list li:first-of-type {
@@ -214,6 +231,10 @@ a {
         display: none;
     }
 
+    .side-footer {
+        padding-left: 10px;
+    }
+
     .side-footer #profile {
         margin-top: 1rem;
     }
@@ -227,7 +248,7 @@ main {
     width: calc(100% - 220px);
     height: 100%;
     float: right;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 @media screen and (max-width: 600px) {
@@ -292,126 +313,74 @@ nav .nav-menu li span {
 /* Main container */
 .main-container {
     padding: 0 20px;
+
+    width: 100%;
+    height: 100%;
 }
 
-.main-container span {
-    display: inline-block;
-    margin: .8rem 0 2rem 0;
-    font-size: .9rem;
+.main-container h2 {
+    margin: 1.2rem 0;
+}
+
+.main-container p {
+    margin-bottom: 1rem;
     color: #a3a3a3;
+    font-size: .8rem;
 }
 
-/* Recently, for john, popular */
-/* .popular .spotify-cards,
-.for-john .spotify-cards,
-.recently .spotify-cards {
-    width: 185px;
-    margin-right: 18px;
+.album-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-.spotify-cards .img-box {
-    height: 185px;
-    width: 185px;    
-} */
-
-.popular .spotify-cards,
-.for-john .spotify-cards,
-.recently .spotify-cards {
-    width: calc(100%/6 - 18px);
-    margin-right: 18px;
-    float: left;
+.album-cards {
+    width: calc(100% / 6 - 10px);
+    margin-right: 10px;
 }
 
-.spotify-cards .img-box {
-    height: 13vw;
-    width: 100%;    
-    background-repeat: no-repeat;
+.album-cards img {
+    width: 100%;
 }
 
-.spotify-cards .text-card {
+.album-text {
     text-align: center;
 }
 
-.spotify-cards .text-card h4 {
-    margin: .8rem 0 .4rem 0;
+.album-text h4 {
+    margin: .7rem 0;
 }
 
-.spotify-cards .text-card span {
-    font-size: .8rem;
+.album-text span {
     color: #a3a3a3;
+    font-size: .8rem;
 }
 
-.popular .spotify-cards .img-box {
+.album-popular img {
     border-radius: 50%;
 }
 
+.lay-hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/* Hover */
+.album-content img
+
 @media screen and (max-width: 1100px) {
+
+    .album-cards {
+        width: calc(100% / 4 - 10px);
+    }
     
-    .popular .spotify-cards,
-    .for-john .spotify-cards,
-    .recently .spotify-cards {
-        float: left;
-        width: calc(100%/4 - 10px);
-        margin-right: 10px;
+}
+
+@media screen and (max-width: 700px) {
+
+    .album-cards {
+        width: calc(100% / 2 - 10px);
     }
-
-    .spotify-cards .img-box {
-        height: 10vw;
-        width: 100%;    
-        background-repeat: no-repeat;
-    }
-
-}
-
-/* IMG CARD */
-#img-card1 {
-    background-image: url(../img/metal_lifting.jpg);
-    background-size: contain;
-}
-
-#img-card2 {
-    background-image: url(../img/stranger.jpeg);
-    background-size: contain;
-}
-
-#img-card3 {
-    background-image: url(../img/aquietplace.jpeg);
-    background-size: contain;
-}
-
-#img-card4 {
-    background-image: url(../img/split.jpeg);
-    background-size: contain;
-}
-
-#img-card5 {
-    background-image: url(../img/cure.jpeg);
-    background-size: contain;
-}
-
-#img-card6 {
-    background-image: url(../img/sinister.jpeg);
-    background-size: contain;
-}
-
-#img-card7 {
-    background-image: url(../img/radar.jpeg);
-    background-size: contain;
-}
-
-#img-card8 {
-    background-image: url(../img/mixdaily.jpeg);
-    background-size: contain;
-}
-
-#img-card9 {
-    background-image: url(../img/youg.jpeg);
-    background-size: contain;
-}
-
-#img-card10 {
-    background-image: url(../img/einaudi.jpeg);
-    background-size: contain;
+    
 }
 
 /* FOOTER */
@@ -472,40 +441,6 @@ footer .footer-menu-center {
     position: relative;
 }
 
-.music-time .time {
-    font-size: .7rem;
-}
-
-.music-time .time span {
-    display: inline-block;
-}
-
-.scroll-time .short {
-    display: inline-block;
-    width: 20%;
-    height: 4px;
-    background-color: lightgrey;
-    position: absolute;
-}
-
-.scroll-time .pallino {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    position: absolute;
-    left: 29%;
-    bottom: 9px;
-    background-color: white;
-
-}
-
-.footer-menu-center .music-time .scroll-time {
-    width: 80%;
-    height: 4px;
-    background-color: #a3a3a3;
-}
-
 .footer-menu-center .player {
     display: flex;
     align-items: center;
@@ -515,6 +450,7 @@ footer .footer-menu-center {
 
 .footer-menu-center .player i {
     margin: 0 .7rem;
+    cursor: pointer;
 }
 
 .footer-menu-center .play {
@@ -528,6 +464,40 @@ footer .footer-menu-center {
     font-size: 1.9rem;
 }
 
+.music-time .time {
+    font-size: .7rem;
+}
+
+.music-time .time span {
+    display: inline-block;
+}
+
+.scroll-time {
+    width: 80%;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #a3a3a3;
+}
+
+.scroll-time .short {
+   width: 20%;
+   height: 100%;
+   border-radius: 5px;
+   background-color: #eeeeee;
+   position: relative;
+}
+
+.scroll-time .circle {
+    display: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 .music-time {
     position: flex;
@@ -538,14 +508,45 @@ footer .footer-menu-center {
     margin: .5rem;
 }
 
+.scroll-time :hover {
+    cursor: pointer;
+    background-color: greenyellow;
+}
+
+.scroll-time :hover .circle{
+    display: block;
+    background-color: white;
+}
+
 /* footer menu right */
 footer .footer-menu-right {
     width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     /* test */
     height: 100%;
-    background-color: yellow;
 }
+
+footer .footer-menu-right li {
+    display: inline-block;
+}
+
+footer .footer-menu-right .control {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.scroll-audio {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
 
 /* HOVER */
 
