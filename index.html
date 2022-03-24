@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:wght@100;300;500;700;900&family=Open+Sans:wght@400;500;700;800&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -22,7 +24,7 @@
 
             <section class="side-top">
 
-                <div>
+                <div class="pl-20px">
                     <img src="img/logo.svg" alt="" id="logo">
                     <img src="img/logo-small.svg" alt="" id="logo-small">
                 </div>
@@ -34,31 +36,42 @@
                     <li><img src="img/libreria.svg" alt=""> <span>La tua libreria</span></li>
                 </ul>
 
-                <div class="plus-playlist">
+                <div class="plus-playlist pl-20px">
                     <h4 class=" white">PLAYLIST</h4>
-                    <a href=""><i class="fas fa-plus-square"></i> <span>Crea Playlist</span></a>
+                    <a href="">
+                        <div class="plus-btn">
+                        <span>+</span>
+                        </div> 
+                        <span>Crea Playlist</span>
+                    </a>
+                    
+                    <ul class="playlist">
+                        <li><a href="">Nome Playlist</a></li>
+                        <li><a href="">Nome Playlist</a></li>
+                        <li><a href="">Nome Playlist</a></li>
+                        <li><a href="">Nome Playlist</a></li>
+                        <li><a href="">Nome Playlist</a></li>
+                        <li><a href="">Nome Playlist</a></li>
+                        <li><a href="">Nome Playlist</a></li>
+                    </ul>
                 </div>
                 
-                <ul class="playlist">
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                </ul>
+                
                 <!-- /Side lists -->
                 
             </section>
 
             <!-- Side footer -->
-            <div class="side-footer">
-                <img src="img/download.svg" alt="" id="download">
-                <span>Installa app</span>
+            <div class="side-footer pl-20px">
+                <a href="">
+                    <img src="img/download.svg" alt="" id="download">
+                    <span>Installa app</span>
+                </a>
                 <hr>
-                <img src="img/profile.svg" alt="" id="profile">
-                <span class="white">John Doe</span>
+                <a href="">
+                    <img src="img/profile.svg" alt="" id="profile">
+                    <span class="white">John Doe</span>
+                </a>
             </div>
             <!-- /Side footer -->
 
@@ -92,7 +105,7 @@
             <section class="main-container">
 
                 <h2 class="mb-15">Recently played</h2>
-                <section class="recently flex-wrap">
+                <section class="recently clear-fix">
                     <div class="spotify-cards">
                         <div class="img-box" id="img-card1"></div>
                         <div class="text-card">
@@ -191,18 +204,38 @@
     <!-- Footer -->
     <footer>
 
-        <div class="col-left">
+        <div class="footer-menu-left">
             <div class="banner-song-left">
                 <img src="img/sinister.jpeg" alt="">
+                <div>
+                    <h5><a href="" class="white">Sinister</a></h5>
+                    <span><a href="" class="subtitle">Brano Nome</a></span>
+                </div>
             </div>
-            <div class="banner-song-right">
-
+            
+            <div class="banner-song-right gray">
+                <a href=""><i class="far fa-heart"></i></a>
+                <a href=""><i class="far fa-folder"></i></a>
             </div>
         </div>
-        <div class="col-center">
-
+        <div class="footer-menu-center">
+            <div class="player">
+                <i class="fas fa-random"></i>
+                <i class="fas fa-step-backward"></i>
+                <span class="play"><i class="far fa-play-circle"></i></span>
+                <i class="fas fa-step-forward"></i>
+                <i class="fas fa-redo-alt"></i>
+            </div>
+            <div class="music-time">
+                <span class="time">1:58</span>
+                <div class="scroll-time">
+                    <span class="short"></span>
+                    <span class="pallino"></span>
+                </div>
+                <span class="time">4:16</span>
+            </div>
         </div>
-        <div class="col-right">
+        <div class="footer-menu-right">
 
         </div>
 
