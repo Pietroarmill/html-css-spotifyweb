@@ -132,6 +132,7 @@ body {
     vertical-align: middle;
 }
 
+
 /* Side playlist */
 .plus-playlist {
     overflow: hidden;
@@ -196,6 +197,22 @@ body {
 .side-footer a span {
     font-size: .7rem;
 }
+
+/* Hover */
+
+
+
+.side-menu-list :hover{
+    color: white;
+    cursor: pointer;
+}
+
+#side-menu li:hover a, 
+.side-footer a :hover,
+.plus :hover  {
+    color: white
+}
+
 
 @media screen and (max-width: 600px) {
     
@@ -304,6 +321,7 @@ nav {
 nav .nav-menu li {
     display: inline-block;
     margin: .4rem .8rem;
+    font-size: 1rem;
 }
 
 nav .nav-menu li span {
@@ -337,9 +355,11 @@ nav .nav-menu li span {
 .album-cards {
     width: calc(100% / 6 - 10px);
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .album-cards img {
+    display: block;
     width: 100%;
 }
 
@@ -357,15 +377,35 @@ nav .nav-menu li span {
 }
 
 .album-popular img {
+    position: relative;
     border-radius: 50%;
 }
 
-.lay-hover {
+.album-popular .with-overlay {
+    border-radius: 50%;
+}
+
+.img-box {
+    position: relative;
+}
+
+.with-overlay{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 2.5rem;
     background-color: rgba(0, 0, 0, .5);
 }
 
 /* Hover */
-.album-content img
+.album-content .album-cards:hover .with-overlay {
+    display: flex;
+}
 
 @media screen and (max-width: 1100px) {
 
